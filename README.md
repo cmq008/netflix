@@ -189,8 +189,7 @@ pipeline {
         nodejs 'node16'
     }
     environment {
-        SCANNER_HOME = tool 'sonar-scanner'
-        TMDB_V3_API_KEY = credentials('TMDB_V3_API_KEY')
+        SCANNER_HOME = tool 'sonar-scanner'        
     }
     stages {
         stage('clean workspace') {
@@ -281,6 +280,7 @@ pipeline{
     }
     environment {
         SCANNER_HOME=tool 'sonar-scanner'
+        TMDB_V3_API_KEY = credentials('TMDB_V3_API_KEY')
     }
     stages {
         stage('clean workspace'){
@@ -328,7 +328,7 @@ pipeline{
             steps{
                 script{
                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker'){   
-                       sh "docker build --build-arg TMDB_V3_API_KEY=$TMDB_V3_API_KEY -t netflix ."
+                       sh "docker build --build-arg TMDB_V3_API_KEY=${TMDB_V3_API_KEY} -t netflix ."
                        sh "docker tag netflix cmq008/netflix:latest "
                        sh "docker push cmq008/netflix:latest "
                     }
