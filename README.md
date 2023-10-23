@@ -393,7 +393,7 @@ sudo systemctl restart jenkins
    Create a systemd unit configuration file for Prometheus:
 
    ```bash
-   sudo nano /etc/systemd/system/prometheus.service
+   sudo vim /etc/systemd/system/prometheus.service
    ```
 
    Add the following content to the `prometheus.service` file:
