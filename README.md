@@ -190,6 +190,7 @@ pipeline {
     }
     environment {
         SCANNER_HOME = tool 'sonar-scanner'
+        TMDB_V3_API_KEY = credentials('TMDB_V3_API_KEY')
     }
     stages {
         stage('clean workspace') {
