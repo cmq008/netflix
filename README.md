@@ -132,7 +132,7 @@ docker build --build-arg TMDB_V3_API_KEY=$TMDB_V3_API_KEY -t netflix .
     https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
     /etc/apt/sources.list.d/jenkins.list > /dev/null
     sudo apt-get update
-    sudo apt-get install jenkins
+    sudo apt-get install jenkins -y
     sudo systemctl start jenkins
     sudo systemctl enable jenkins
     ```
