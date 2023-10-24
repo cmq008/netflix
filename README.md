@@ -735,6 +735,11 @@ To deploy an application with ArgoCD, you can follow these steps, which I'll out
 
    You can install ArgoCD on your Kubernetes cluster by following the instructions provided in the [EKS Workshop](https://archive.eksworkshop.com/intermediate/290_argocd/install/) documentation.
 
+   To connect EKS Cluster use the command:
+   ```
+   aws eks --region us-east-1 update-kubeconfig --name cluster-demo
+   ```
+
 2. **Set Your GitHub Repository as a Source:**
 
    After installing ArgoCD, you need to set up your GitHub repository as a source for your application deployment. This typically involves configuring the connection to your repository and defining the source for your ArgoCD application. The specific steps will depend on your setup and requirements.
