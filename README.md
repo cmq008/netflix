@@ -472,7 +472,7 @@ sudo systemctl restart jenkins
    Create a systemd unit configuration file for Node Exporter:
 
    ```bash
-   sudo nano /etc/systemd/system/node_exporter.service
+   sudo vim /etc/systemd/system/node_exporter.service
    ```
 
    Add the following content to the `node_exporter.service` file:
